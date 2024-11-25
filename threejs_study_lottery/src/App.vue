@@ -128,6 +128,7 @@ function initWorld() {
   let boxSize = 40;
   let y = 40;
   let x = 0;
+  let z =0;
   let boxTop = spawnStaticBox(scene, world, pom, boxSize / 2, 1, boxSize / 2);
   boxTop.body.position.y = y + boxSize / 2;
   let boxBottom = spawnStaticBox(
@@ -145,9 +146,9 @@ function initWorld() {
   let boxRight = spawnStaticBox(scene, world, pom, 1, boxSize / 2, boxSize / 2);
   boxRight.body.position.y = y;
   boxRight.body.position.x = x + boxSize / 2;
-  let boxBack = spawnStaticBox(scene, world, pom, 1, boxSize / 2, boxSize / 2);
-  boxRight.body.position.y = y;
-  boxRight.body.position.x = x + boxSize / 2;
+  let boxBack = spawnStaticBox(scene, world, pom,  boxSize / 2, boxSize / 2, 1);
+  boxBack.body.position.y = y;
+  boxBack.body.position.z = z - boxSize / 2;
 
   const spawnBox = (scene, world, pom, x, y, z) => {
     let sphere1 = new PhysicsObject();
