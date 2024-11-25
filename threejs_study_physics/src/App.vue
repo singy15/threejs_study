@@ -200,8 +200,8 @@ function initWorld() {
 
     const geo = new THREE.BoxGeometry(size * 2, thickness, size * 2);
     const mat = new THREE.MeshStandardMaterial({
-      // color: 0xffffff,
-      map: texWood,
+      color: 0xffffff,
+      // map: texWood,
     });
     mat.roughness = 0.3;
     const cube = new THREE.Mesh(geo, mat);
